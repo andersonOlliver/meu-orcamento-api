@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9F7A0BF5-01AF-4605-A7CE-ADA7806553E4}</ProjectGuid>
+    <ProjectGuid>{33763216-25DD-4843-B3E2-B01316C9CCBB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Meu.Orcamento.Domain</RootNamespace>
-    <AssemblyName>Meu.Orcamento.Domain</AssemblyName>
+    <RootNamespace>Meu.Orcamento.IoC</RootNamespace>
+    <AssemblyName>Meu.Orcamento.IoC</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SimpleInjector, Version=4.0.6.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.4.0.6\lib\net45\SimpleInjector.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,15 +44,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Lancamento.cs" />
-    <Compile Include="Interfaces\Repositories\Lancamento\ILancamentoRepository.cs" />
-    <Compile Include="Interfaces\Repositories\IRepository.cs" />
-    <Compile Include="Interfaces\Services\IService.cs" />
-    <Compile Include="Interfaces\Services\Lancamento\ILancamentoService.cs" />
+    <Compile Include="BootStrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Lancamento\LancamentoService.cs" />
-    <Compile Include="Services\Service.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Meu.Orcamento.Application\Meu.Orcamento.Application.csproj">
+      <Project>{9DF01682-5716-4C84-B890-92B5259358C0}</Project>
+      <Name>Meu.Orcamento.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Meu.Orcamento.Data\Meu.Orcamento.Data.csproj">
+      <Project>{7fd4adb6-57c2-4084-a391-1123d53b1627}</Project>
+      <Name>Meu.Orcamento.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Meu.Orcamento.Domain\Meu.Orcamento.Domain.csproj">
+      <Project>{9f7a0bf5-01af-4605-a7ce-ada7806553e4}</Project>
+      <Name>Meu.Orcamento.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2020
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Rest", "1-Rest", "{ECCDF404-92C7-460F-ACFC-8D1BD39645D4}"
 EndProject
@@ -18,6 +18,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meu.Orcamento.API", "Meu.Orcamento.API\Meu.Orcamento.API.csproj", "{1D3776A2-7832-4967-AF9C-A2C5E76EA7DD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meu.Orcamento.Data", "Meu.Orcamento.Data\Meu.Orcamento.Data.csproj", "{7FD4ADB6-57C2-4084-A391-1123D53B1627}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2-IoC", "4.2-IoC", "{6421B298-A7AC-4265-BFD9-5E3E6792E127}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meu.Orcamento.IoC", "Meu.Orcamento.IoC\Meu.Orcamento.IoC.csproj", "{33763216-25DD-4843-B3E2-B01316C9CCBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meu.Orcamento.Application", "Meu.Orcamento.Application\Meu.Orcamento.Application.csproj", "{9DF01682-5716-4C84-B890-92B5259358C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +43,14 @@ Global
 		{7FD4ADB6-57C2-4084-A391-1123D53B1627}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FD4ADB6-57C2-4084-A391-1123D53B1627}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FD4ADB6-57C2-4084-A391-1123D53B1627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33763216-25DD-4843-B3E2-B01316C9CCBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33763216-25DD-4843-B3E2-B01316C9CCBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33763216-25DD-4843-B3E2-B01316C9CCBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33763216-25DD-4843-B3E2-B01316C9CCBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DF01682-5716-4C84-B890-92B5259358C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DF01682-5716-4C84-B890-92B5259358C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DF01682-5716-4C84-B890-92B5259358C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DF01682-5716-4C84-B890-92B5259358C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +60,9 @@ Global
 		{480E4ED6-23A6-46C1-AB7C-38716336168D} = {1F73DFB3-F72F-4615-9DF0-4E2E8DF140B8}
 		{1D3776A2-7832-4967-AF9C-A2C5E76EA7DD} = {ECCDF404-92C7-460F-ACFC-8D1BD39645D4}
 		{7FD4ADB6-57C2-4084-A391-1123D53B1627} = {480E4ED6-23A6-46C1-AB7C-38716336168D}
+		{6421B298-A7AC-4265-BFD9-5E3E6792E127} = {1F73DFB3-F72F-4615-9DF0-4E2E8DF140B8}
+		{33763216-25DD-4843-B3E2-B01316C9CCBB} = {6421B298-A7AC-4265-BFD9-5E3E6792E127}
+		{9DF01682-5716-4C84-B890-92B5259358C0} = {05140FF3-E047-44BE-90E8-D583BD721D26}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6C75EFA5-CFF8-4070-96F3-6B6E04FF14DD}

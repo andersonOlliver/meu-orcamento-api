@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Meu.Orcamento.Domain.Entities
 {
@@ -13,5 +9,7 @@ namespace Meu.Orcamento.Domain.Entities
         public string Description { get; set; }
 
         public decimal Value{ get; set; }
+
+        public DateTime DateLancamento{ get; set; }
     }
 }

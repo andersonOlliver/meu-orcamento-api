@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Meu.Orcamento.Domain.Interfaces.Services
 {
-    public interface IService<P, K> : IDisposable where P : class
+    public interface IService<P, K> : IDisposable
     {
         P Add(P obj);
 
