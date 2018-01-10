@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Rest", "1-Rest", "{ECCDF404-92C7-460F-ACFC-8D1BD39645D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Domain", "3-Domain", "{DC2AFB1C-6C88-46F7-8673-56FAA76591E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Infra", "4-Infra", "{1F73DFB3-F72F-4615-9DF0-4E2E8DF140B8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Application", "2-Application", "{05140FF3-E047-44BE-90E8-D583BD721D26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meu.Orcamento.Domain", "Meu.Orcamento.Domain\Meu.Orcamento.Domain.csproj", "{9F7A0BF5-01AF-4605-A7CE-ADA7806553E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1-Data", "4.1-Data", "{480E4ED6-23A6-46C1-AB7C-38716336168D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meu.Orcamento.API", "Meu.Orcamento.API\Meu.Orcamento.API.csproj", "{1D3776A2-7832-4967-AF9C-A2C5E76EA7DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meu.Orcamento.Data", "Meu.Orcamento.Data\Meu.Orcamento.Data.csproj", "{7FD4ADB6-57C2-4084-A391-1123D53B1627}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F7A0BF5-01AF-4605-A7CE-ADA7806553E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F7A0BF5-01AF-4605-A7CE-ADA7806553E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F7A0BF5-01AF-4605-A7CE-ADA7806553E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F7A0BF5-01AF-4605-A7CE-ADA7806553E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D3776A2-7832-4967-AF9C-A2C5E76EA7DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D3776A2-7832-4967-AF9C-A2C5E76EA7DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D3776A2-7832-4967-AF9C-A2C5E76EA7DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D3776A2-7832-4967-AF9C-A2C5E76EA7DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FD4ADB6-57C2-4084-A391-1123D53B1627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FD4ADB6-57C2-4084-A391-1123D53B1627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FD4ADB6-57C2-4084-A391-1123D53B1627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FD4ADB6-57C2-4084-A391-1123D53B1627}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9F7A0BF5-01AF-4605-A7CE-ADA7806553E4} = {DC2AFB1C-6C88-46F7-8673-56FAA76591E0}
+		{480E4ED6-23A6-46C1-AB7C-38716336168D} = {1F73DFB3-F72F-4615-9DF0-4E2E8DF140B8}
+		{1D3776A2-7832-4967-AF9C-A2C5E76EA7DD} = {ECCDF404-92C7-460F-ACFC-8D1BD39645D4}
+		{7FD4ADB6-57C2-4084-A391-1123D53B1627} = {480E4ED6-23A6-46C1-AB7C-38716336168D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C75EFA5-CFF8-4070-96F3-6B6E04FF14DD}
+	EndGlobalSection
+EndGlobal
