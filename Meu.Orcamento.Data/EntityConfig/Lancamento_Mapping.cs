@@ -7,7 +7,19 @@ namespace Meu.Orcamento.Data.EntityConfig
     {
         public Lancamento_Mapping()
         {
+            ToTable("Lancamento");
 
+            HasKey(l => l.LancamentoId);
+
+            Property(l => l.Descricao)
+                .HasMaxLength(100)
+                .IsRequired()
+                .HasColumnName("Descricao");
+
+            Property(l => l.TipoLancamento)
+                .IsRequired();
+
+           
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Meu.Orcamento.Application.Interfaces.Lancamento;
+﻿using Meu.Orcamento.Application.Interfaces.Categoria;
+using Meu.Orcamento.Application.Interfaces.Lancamento;
 using Meu.Orcamento.Application.Services;
 using Meu.Orcamento.Data.Context;
 using Meu.Orcamento.Data.Repositories;
@@ -16,10 +17,12 @@ namespace Meu.Orcamento.IoC
         {
 
             #region App
+            container.Register<ICategoriaAppService, CategoriaAppService>(Lifestyle.Scoped);
             container.Register<ILancamentoAppService, LancamentoAppService>(Lifestyle.Scoped);
             #endregion
 
             #region Domain
+            container.Register<ICategoriaService, CategoriaService>(Lifestyle.Scoped);
             container.Register<ILancamentoService, LancamentoService>(Lifestyle.Scoped);
             #endregion
 
@@ -27,6 +30,7 @@ namespace Meu.Orcamento.IoC
             container.Register<MeuOrcamentoContext>(Lifestyle.Scoped);
             container.Register<IUnitOfWork, UnitOfWork>(Lifestyle.Scoped);
 
+            container.Register<ICategoriaRepository, CategoriaRepository>(Lifestyle.Scoped);
             container.Register<ILancamentoRepository, LancamentoRepository>(Lifestyle.Scoped);
             #endregion
         }

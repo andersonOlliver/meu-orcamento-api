@@ -44,20 +44,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoMapper\Categoria\Categoria_profile.cs" />
     <Compile Include="AutoMapper\Lancamento\Lancamento_Profile.cs" />
     <Compile Include="AutoMapper\MappingConfig.cs" />
+    <Compile Include="Interfaces\Categoria\ICategoriaAppService.cs" />
     <Compile Include="Interfaces\IAppService.cs" />
     <Compile Include="Interfaces\Lancamento\ILancamentoAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ApplicationService.cs" />
     <Compile Include="Services\AppService.cs" />
+    <Compile Include="Services\Categoria\CategoriaAppService.cs" />
     <Compile Include="Services\Lancamento\LancamentoAppService.cs" />
+    <Compile Include="ViewModels\Categoria\AdicionaCategoriaViewModel.cs" />
+    <Compile Include="ViewModels\Categoria\CategoriaViewModel.cs" />
+    <Compile Include="ViewModels\Lancamento\AdicionaLancamentoViewModel.cs" />
     <Compile Include="ViewModels\Lancamento\LancamentoViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Meu.Orcamento.CrossCuting\Meu.Orcamento.CrossCuting.csproj">
+      <Project>{FC60414A-E273-423A-B66C-853E04421517}</Project>
+      <Name>Meu.Orcamento.CrossCuting</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Meu.Orcamento.Data\Meu.Orcamento.Data.csproj">
       <Project>{7fd4adb6-57c2-4084-a391-1123d53b1627}</Project>
       <Name>Meu.Orcamento.Data</Name>

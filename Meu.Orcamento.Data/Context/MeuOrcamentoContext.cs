@@ -16,10 +16,10 @@ namespace Meu.Orcamento.Data.Context
         }
 
         #region Entities
-
+        public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Lancamento> Lancamentos{ get; set; }
-
         #endregion
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

@@ -1,12 +1,8 @@
 ﻿using AutoMapper;
 using Meu.Orcamento.Application.Interfaces;
-using Meu.Orcamento.Domain.Interfaces.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Meu.Orcamento.Data.UoW;
+using Meu.Orcamento.Domain.Interfaces.Services;
+using System.Collections.Generic;
 
 namespace Meu.Orcamento.Application.Services
 {

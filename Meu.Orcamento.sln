@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Rest", "1-Rest", "{ECCDF404-92C7-460F-ACFC-8D1BD39645D4}"
 EndProject
@@ -24,6 +24,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meu.Orcamento.IoC", "Meu.Orcamento.IoC\Meu.Orcamento.IoC.csproj", "{33763216-25DD-4843-B3E2-B01316C9CCBB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meu.Orcamento.Application", "Meu.Orcamento.Application\Meu.Orcamento.Application.csproj", "{9DF01682-5716-4C84-B890-92B5259358C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.3-CrossCuting", "4.3-CrossCuting", "{4CBF99C2-84D4-4DF4-AD0D-90062F7688FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meu.Orcamento.CrossCuting", "Meu.Orcamento.CrossCuting\Meu.Orcamento.CrossCuting.csproj", "{FC60414A-E273-423A-B66C-853E04421517}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,10 @@ Global
 		{9DF01682-5716-4C84-B890-92B5259358C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DF01682-5716-4C84-B890-92B5259358C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DF01682-5716-4C84-B890-92B5259358C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC60414A-E273-423A-B66C-853E04421517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC60414A-E273-423A-B66C-853E04421517}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC60414A-E273-423A-B66C-853E04421517}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC60414A-E273-423A-B66C-853E04421517}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +71,8 @@ Global
 		{6421B298-A7AC-4265-BFD9-5E3E6792E127} = {1F73DFB3-F72F-4615-9DF0-4E2E8DF140B8}
 		{33763216-25DD-4843-B3E2-B01316C9CCBB} = {6421B298-A7AC-4265-BFD9-5E3E6792E127}
 		{9DF01682-5716-4C84-B890-92B5259358C0} = {05140FF3-E047-44BE-90E8-D583BD721D26}
+		{4CBF99C2-84D4-4DF4-AD0D-90062F7688FB} = {1F73DFB3-F72F-4615-9DF0-4E2E8DF140B8}
+		{FC60414A-E273-423A-B66C-853E04421517} = {4CBF99C2-84D4-4DF4-AD0D-90062F7688FB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6C75EFA5-CFF8-4070-96F3-6B6E04FF14DD}

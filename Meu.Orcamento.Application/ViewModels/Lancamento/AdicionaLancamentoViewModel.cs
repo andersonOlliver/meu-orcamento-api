@@ -1,10 +1,9 @@
-﻿using System;
-using Meu.Orcamento.Application.ViewModels.Categoria;
-using Meu.Orcamento.CrossCuting.Enum;
+﻿using Meu.Orcamento.CrossCuting.Enum;
+using System;
 
 namespace Meu.Orcamento.Application.ViewModels.Lancamento
 {
-    public class LancamentoViewModel
+    public class AdicionaLancamentoViewModel
     {
         public Guid LancamentoId { get; set; }
 
@@ -17,6 +16,5 @@ namespace Meu.Orcamento.Application.ViewModels.Lancamento
         public DateTime DataLancamento { get; set; }
 
         public Guid CategoriaId { get; set; }
-        public virtual CategoriaViewModel Categoria { get; set; }
     }
 }

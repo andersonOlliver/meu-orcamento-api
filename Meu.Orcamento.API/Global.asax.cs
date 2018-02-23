@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Meu.Orcamento.Application.AutoMapper;
 using System.Web.Http;
-using System.Web.Routing;
 
 namespace Meu.Orcamento.API
 {
@@ -12,6 +8,7 @@ namespace Meu.Orcamento.API
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            MappingConfig.RegisterMap();
         }
     }
 }

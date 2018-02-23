@@ -1,8 +1,9 @@
-﻿using Meu.Orcamento.Domain.Entities;
+﻿using System;
+using Meu.Orcamento.Domain.Entities;
 
 namespace Meu.Orcamento.Domain.Interfaces.Repositories
 {
-    public interface ILancamentoRepository: IRepository<Lancamento, int>
+    public interface ILancamentoRepository: IRepository<Lancamento, Guid>
     {
 
     }

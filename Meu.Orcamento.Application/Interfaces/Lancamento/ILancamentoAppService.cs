@@ -1,8 +1,9 @@
-﻿using Meu.Orcamento.Application.ViewModels.Lancamento;
+﻿using System;
+using Meu.Orcamento.Application.ViewModels.Lancamento;
 
 namespace Meu.Orcamento.Application.Interfaces.Lancamento
 {
-    public interface ILancamentoAppService: IAppService<LancamentoViewModel, LancamentoViewModel, LancamentoViewModel, int>
+    public interface ILancamentoAppService: IAppService<AdicionaLancamentoViewModel, LancamentoViewModel, LancamentoViewModel, Guid>
     {
     }
 }

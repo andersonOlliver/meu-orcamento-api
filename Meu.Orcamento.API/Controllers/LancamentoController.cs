@@ -1,34 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
+using Meu.Orcamento.Application.Interfaces.Lancamento;
+using Meu.Orcamento.Application.ViewModels.Lancamento;
 
 namespace Meu.Orcamento.API.Controllers
 {
     public class LancamentoController : ApiController
     {
-        // GET: api/Lancamento
-        public IEnumerable<string> Get()
+
+        private readonly ILancamentoAppService _lancamentoAppService;
+
+        public LancamentoController(ILancamentoAppService lancamentoAppService)
         {
-            return new string[] { "value1", "value2" };
+            _lancamentoAppService = lancamentoAppService;
+        }
+
+        // GET: api/Lancamento
+        public IEnumerable<LancamentoViewModel> Get()
+        {
+            return _lancamentoAppService.GetAll();
         }
 
         // GET: api/Lancamento/5
-        public string Get(int id)
+        public LancamentoViewModel Get(Guid id)
         {
-            return "value";
+            return _lancamentoAppService.GetById<LancamentoViewModel>(id);
         }
 
         // POST: api/Lancamento
-        public void Post([FromBody]string value)
+        public AdicionaLancamentoViewModel Post([FromBody]AdicionaLancamentoViewModel value)
         {
+            return _lancamentoAppService.Add(value);
         }
 
         // PUT: api/Lancamento/5
-        public void Put(int id, [FromBody]string value)
+        public LancamentoViewModel Put(Guid id, [FromBody]LancamentoViewModel value)
         {
+            return _lancamentoAppService.Update(value);
         }
 
         // DELETE: api/Lancamento/5

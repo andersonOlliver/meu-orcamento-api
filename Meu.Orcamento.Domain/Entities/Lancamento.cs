@@ -1,15 +1,21 @@
 ﻿using System;
+using Meu.Orcamento.CrossCuting.Enum;
 
 namespace Meu.Orcamento.Domain.Entities
 {
     public class Lancamento
     {
-        public int LancamentoId { get; set; }
+        public Guid LancamentoId { get; set; }
 
-        public string Description { get; set; }
+        public string Descricao { get; set; }
 
-        public decimal Value{ get; set; }
+        public decimal Valor{ get; set; }
 
-        public DateTime DateLancamento{ get; set; }
+        public TipoLancamento TipoLancamento { get; set; }
+
+        public DateTime DataLancamento{ get; set; }
+
+        public Guid CategoriaId { get; set; }
+        public virtual Categoria Categoria { get; set; }
     }
 }
