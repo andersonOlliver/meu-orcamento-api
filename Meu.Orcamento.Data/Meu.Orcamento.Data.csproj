@@ -50,15 +50,25 @@
     <Compile Include="Context\MeuOrcamentoContext.cs" />
     <Compile Include="EntityConfig\Categoria_Mapping.cs" />
     <Compile Include="EntityConfig\Lancamento_Mapping.cs" />
-    <Compile Include="Migrations\201802231934289_cria_banco.cs" />
-    <Compile Include="Migrations\201802231934289_cria_banco.Designer.cs">
-      <DependentUpon>201802231934289_cria_banco.cs</DependentUpon>
+    <Compile Include="EntityConfig\Usuario_Mapping.cs" />
+    <Compile Include="Migrations\201802241819576_cria_banco.cs" />
+    <Compile Include="Migrations\201802241819576_cria_banco.Designer.cs">
+      <DependentUpon>201802241819576_cria_banco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802242206573_adiciona_usuario.cs" />
+    <Compile Include="Migrations\201802242206573_adiciona_usuario.Designer.cs">
+      <DependentUpon>201802242206573_adiciona_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802250255035_atualiza_usuario.cs" />
+    <Compile Include="Migrations\201802250255035_atualiza_usuario.Designer.cs">
+      <DependentUpon>201802250255035_atualiza_usuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Categoria\CategoriaRepository.cs" />
     <Compile Include="Repositories\Lancamento\LancamentoRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\Usuario\UsuarioRepository.cs" />
     <Compile Include="UoW\IUnitOfWork.cs" />
     <Compile Include="UoW\UnitOfWork.cs" />
   </ItemGroup>
@@ -79,8 +89,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201802231934289_cria_banco.resx">
-      <DependentUpon>201802231934289_cria_banco.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802241819576_cria_banco.resx">
+      <DependentUpon>201802241819576_cria_banco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802242206573_adiciona_usuario.resx">
+      <DependentUpon>201802242206573_adiciona_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802250255035_atualiza_usuario.resx">
+      <DependentUpon>201802250255035_atualiza_usuario.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

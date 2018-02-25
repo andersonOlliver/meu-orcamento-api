@@ -19,7 +19,7 @@ namespace Meu.Orcamento.Data.Repositories
             DbSet = Db.Set<TEntity>();
         }
 
-        public TEntity Add(TEntity obj)
+        public virtual TEntity Add(TEntity obj)
         {
             var objReturn = DbSet.Add(obj);
             return objReturn;

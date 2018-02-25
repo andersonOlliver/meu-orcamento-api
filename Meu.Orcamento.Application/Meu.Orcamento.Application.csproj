@@ -34,8 +34,24 @@
     <Reference Include="AutoMapper, Version=6.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\packages\AutoMapper.6.0.2\lib\net45\AutoMapper.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.7.4.0\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation.WebApi, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.WebApi.7.4.0\lib\net45\FluentValidation.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,18 +63,26 @@
     <Compile Include="AutoMapper\Categoria\Categoria_profile.cs" />
     <Compile Include="AutoMapper\Lancamento\Lancamento_Profile.cs" />
     <Compile Include="AutoMapper\MappingConfig.cs" />
+    <Compile Include="AutoMapper\Usuario\Usuario_Profile.cs" />
+    <Compile Include="Helpers\Mensagens.cs" />
     <Compile Include="Interfaces\Categoria\ICategoriaAppService.cs" />
     <Compile Include="Interfaces\IAppService.cs" />
     <Compile Include="Interfaces\Lancamento\ILancamentoAppService.cs" />
+    <Compile Include="Interfaces\Usuario\IUsuarioAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ApplicationService.cs" />
     <Compile Include="Services\AppService.cs" />
     <Compile Include="Services\Categoria\CategoriaAppService.cs" />
     <Compile Include="Services\Lancamento\LancamentoAppService.cs" />
+    <Compile Include="Services\Usuario\UsuarioAppService.cs" />
+    <Compile Include="Validators\Usuario\AdicionaUsuarioViewModel_Validator.cs" />
     <Compile Include="ViewModels\Categoria\AdicionaCategoriaViewModel.cs" />
     <Compile Include="ViewModels\Categoria\CategoriaViewModel.cs" />
     <Compile Include="ViewModels\Lancamento\AdicionaLancamentoViewModel.cs" />
     <Compile Include="ViewModels\Lancamento\LancamentoViewModel.cs" />
+    <Compile Include="ViewModels\Usuario\AdicionaUsuarioViewModel.cs" />
+    <Compile Include="ViewModels\Usuario\AutenticaUsuarioViewModel.cs" />
+    <Compile Include="ViewModels\Usuario\UsuarioViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

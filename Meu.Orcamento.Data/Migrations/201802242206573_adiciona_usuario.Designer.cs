@@ -7,13 +7,13 @@ namespace Meu.Orcamento.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class cria_banco : IMigrationMetadata
+    public sealed partial class adiciona_usuario : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(cria_banco));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(adiciona_usuario));
         
         string IMigrationMetadata.Id
         {
-            get { return "201802231934289_cria_banco"; }
+            get { return "201802242206573_adiciona_usuario"; }
         }
         
         string IMigrationMetadata.Source

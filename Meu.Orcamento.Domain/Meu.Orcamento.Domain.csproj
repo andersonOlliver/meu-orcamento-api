@@ -40,18 +40,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Base\EntityBase.cs" />
     <Compile Include="Entities\Categoria.cs" />
     <Compile Include="Entities\Lancamento.cs" />
+    <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Interfaces\Repositories\Categoria\ICategoriaRepository.cs" />
     <Compile Include="Interfaces\Repositories\Lancamento\ILancamentoRepository.cs" />
     <Compile Include="Interfaces\Repositories\IRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Usuario\IUsuarioRepository.cs" />
     <Compile Include="Interfaces\Services\Categoria\ICategoriaService.cs" />
     <Compile Include="Interfaces\Services\IService.cs" />
     <Compile Include="Interfaces\Services\Lancamento\ILancamentoService.cs" />
+    <Compile Include="Interfaces\Services\Usuario\IUsuarioService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Categoria\CategoriaService.cs" />
     <Compile Include="Services\Lancamento\LancamentoService.cs" />
     <Compile Include="Services\Service.cs" />
+    <Compile Include="Services\Usuario\UsuarioService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Meu.Orcamento.CrossCuting\Meu.Orcamento.CrossCuting.csproj">
@@ -59,5 +64,6 @@
       <Name>Meu.Orcamento.CrossCuting</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
