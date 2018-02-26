@@ -6,7 +6,7 @@ using Meu.Orcamento.Application.ViewModels.Usuario;
 
 namespace Meu.Orcamento.Api.Controller
 {
-    [Authorize]
+    //[Authorize]
     public class UsuarioController : ApiController
     {
         private readonly IUsuarioAppService _usuarioAppService;

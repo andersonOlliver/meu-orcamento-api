@@ -16,6 +16,7 @@ using SimpleInjector.Lifestyles;
 
 namespace Meu.Orcamento.Api.Security
 {
+
     public class AuthorizationProvider : OAuthAuthorizationServerProvider
     {
         private readonly Container _container;
@@ -32,6 +33,8 @@ namespace Meu.Orcamento.Api.Security
 
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
+            var identity = new ClaimsIdentity(context.Options.AuthenticationType);
+            context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
             using (AsyncScopedLifestyle.BeginScope(_container))
             {
 
@@ -52,7 +55,7 @@ namespace Meu.Orcamento.Api.Security
                         return;
                     }
 
-                    var identity = new ClaimsIdentity(context.Options.AuthenticationType);
+                    //var identity = new ClaimsIdentity(context.Options.AuthenticationType);
                     identity.AddClaim(new Claim("Usuario", JsonConvert.SerializeObject(usuario)));
 
                     var principal = new GenericPrincipal(identity, new string[] { });

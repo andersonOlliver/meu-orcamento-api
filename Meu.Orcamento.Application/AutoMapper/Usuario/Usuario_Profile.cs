@@ -18,7 +18,8 @@ namespace Meu.Orcamento.Application.AutoMapper
                 .ForMember(dest => dest.UsuarioId,
                     opts => opts.MapFrom(src => Guid.NewGuid()));
 
-            CreateMap<Usuario, AutenticaUsuarioViewModel>().ReverseMap();
+            CreateMap<Usuario, AutenticaUsuarioViewModel>()
+                .ReverseMap();
 
             CreateMap<AdicionaUsuarioViewModel, UsuarioViewModel>();
         }
