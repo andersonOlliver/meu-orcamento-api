@@ -6,6 +6,7 @@ using System.Web.Http;
 
 namespace Meu.Orcamento.API.Controllers
 {
+    [Authorize]
     public class CategoriaController : ApiController
     {
         private readonly ICategoriaAppService _categoriaAppService;

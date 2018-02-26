@@ -6,6 +6,7 @@ using Meu.Orcamento.Application.ViewModels.Lancamento;
 
 namespace Meu.Orcamento.API.Controllers
 {
+    [Authorize]
     public class LancamentoController : ApiController
     {
 

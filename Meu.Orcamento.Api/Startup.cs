@@ -5,7 +5,9 @@ using System.Web;
 using System.Web.Http;
 using FluentValidation.WebApi;
 using Meu.Orcamento.Api.App_Start;
+using Meu.Orcamento.Api.Security;
 using Meu.Orcamento.Application.AutoMapper;
+using Meu.Orcamento.Application.Interfaces.Usuario;
 using Meu.Orcamento.IoC;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.OAuth;
@@ -31,8 +33,8 @@ namespace Meu.Orcamento.Api
             config.DependencyResolver = ConfiguraSimpleInjector(ref container, config);
 
             ConfigureWebApi(config);
-            //ConfiguraValidacao(config);
-            //ConfigureOAuth(app, container);
+            ConfiguraValidacao(config);
+            ConfigureOAuth(app, container);
             ConfiguraAutoMapper();
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
 
@@ -81,12 +83,14 @@ namespace Meu.Orcamento.Api
 
         public void ConfigureOAuth(IAppBuilder app, Container container)
         {
+            Func<IUsuarioAppService> userAppService = () => container.GetInstance<IUsuarioAppService>();
+
             OAuthAuthorizationServerOptions OAuthServerOptions = new OAuthAuthorizationServerOptions()
             {
                 AllowInsecureHttp = true,
                 TokenEndpointPath = new PathString("/token"),
                 AccessTokenExpireTimeSpan = TimeSpan.FromHours(2),
-                //Provider = new AuthorizationProvider(container)
+                Provider = new AuthorizationProvider(container)
             };
 
             app.UseOAuthAuthorizationServer(OAuthServerOptions);
