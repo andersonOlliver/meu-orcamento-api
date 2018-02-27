@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Security.Principal;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Web;
-using Meu.Orcamento.Application.Interfaces.Usuario;
-using Meu.Orcamento.Application.Services;
+﻿using Meu.Orcamento.Application.Interfaces.Usuario;
 using Meu.Orcamento.Application.ViewModels.Usuario;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json;
 using SimpleInjector;
 using SimpleInjector.Lifestyles;
+using System;
+using System.Security.Claims;
+using System.Security.Principal;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Meu.Orcamento.Api.Security
 {

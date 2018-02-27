@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Http;
-using FluentValidation.WebApi;
+﻿using FluentValidation.WebApi;
 using Meu.Orcamento.Api.App_Start;
 using Meu.Orcamento.Api.Security;
 using Meu.Orcamento.Application.AutoMapper;
@@ -17,6 +12,8 @@ using Owin;
 using SimpleInjector;
 using SimpleInjector.Integration.WebApi;
 using SimpleInjector.Lifestyles;
+using System;
+using System.Web.Http;
 
 namespace Meu.Orcamento.Api
 {
