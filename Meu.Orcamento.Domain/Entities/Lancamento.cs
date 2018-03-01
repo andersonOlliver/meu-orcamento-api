@@ -17,5 +17,8 @@ namespace Meu.Orcamento.Domain.Entities
 
         public Guid CategoriaId { get; set; }
         public virtual Categoria Categoria { get; set; }
+
+        public Guid UsuarioId { get; set; }
+        public virtual Usuario Usuario { get; set; }
     }
 }

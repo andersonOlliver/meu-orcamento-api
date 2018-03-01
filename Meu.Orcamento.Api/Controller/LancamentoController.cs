@@ -29,6 +29,13 @@ namespace Meu.Orcamento.API.Controllers
             return _lancamentoAppService.GetById<LancamentoViewModel>(id);
         }
 
+        [HttpGet]
+        [Route("obter-lancamentos/{idusuario}/{mes}-{ano}")]
+        public IEnumerable<LancamentoViewModel> ObterLancamentos(Guid idusuario, int mes, int ano)
+        {
+            return _lancamentoAppService.GetLancamentosMensalUsuario(idusuario, mes, ano);
+        }
+
         // POST: api/Lancamento
         public AdicionaLancamentoViewModel Post([FromBody]AdicionaLancamentoViewModel value)
         {

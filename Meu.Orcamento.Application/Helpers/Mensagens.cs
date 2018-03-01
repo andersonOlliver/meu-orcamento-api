@@ -8,6 +8,9 @@
         public const string SenhaObrigatoria = "Senha obrigatório";
         public const string TamanhoSenha = "Senha deve ter entre 6 e 50 caracteres";
         public const string UltimoNomeObrigatorio = "UltimoNome obrigatório";
-        
+        public const string TituloObrigatorio = "Título obrigatório";
+        public const string CorObrigatorio = "Cor obrigatório";
+        public const string TamanhoMaximo = "Tamanho Maximo de {0} caracteres";
+        public const string CampoObrigatório = "{0} obrigatório";
     }
 }

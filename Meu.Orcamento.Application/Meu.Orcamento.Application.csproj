@@ -75,6 +75,8 @@
     <Compile Include="Services\Categoria\CategoriaAppService.cs" />
     <Compile Include="Services\Lancamento\LancamentoAppService.cs" />
     <Compile Include="Services\Usuario\UsuarioAppService.cs" />
+    <Compile Include="Validators\Categoria\AdicionaCategoriaViewModel_Validator.cs" />
+    <Compile Include="Validators\Lancamento\AdicionaLancamentoViewModel_Validator.cs" />
     <Compile Include="Validators\Usuario\AdicionaUsuarioViewModel_Validator.cs" />
     <Compile Include="ViewModels\Categoria\AdicionaCategoriaViewModel.cs" />
     <Compile Include="ViewModels\Categoria\CategoriaViewModel.cs" />
@@ -101,5 +103,6 @@
       <Name>Meu.Orcamento.Domain</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
