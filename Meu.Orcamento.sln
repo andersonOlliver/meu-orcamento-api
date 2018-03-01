@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2026
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Rest", "1-Rest", "{ECCDF404-92C7-460F-ACFC-8D1BD39645D4}"
 EndProject
@@ -33,6 +33,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8CED246A-E15
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7C36A220-90D7-48B8-BBF1-DB4D5879E4F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meu.Orcamento.Domain.Test", "Meu.Orcamento.Domain.Test\Meu.Orcamento.Domain.Test.csproj", "{40727C25-A95F-4F3A-9A4F-18FCEEABEB62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meu.Orcamento.Domain.SharedTest", "Meu.Orcamento.Domain.SharedTest\Meu.Orcamento.Domain.SharedTest.csproj", "{514D6F2F-48B2-44D7-B263-401FDD4ECF7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{CDC431C1-0603-4F72-A935-ED2098470877}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDC431C1-0603-4F72-A935-ED2098470877}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDC431C1-0603-4F72-A935-ED2098470877}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40727C25-A95F-4F3A-9A4F-18FCEEABEB62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40727C25-A95F-4F3A-9A4F-18FCEEABEB62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40727C25-A95F-4F3A-9A4F-18FCEEABEB62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40727C25-A95F-4F3A-9A4F-18FCEEABEB62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{514D6F2F-48B2-44D7-B263-401FDD4ECF7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{514D6F2F-48B2-44D7-B263-401FDD4ECF7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{514D6F2F-48B2-44D7-B263-401FDD4ECF7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{514D6F2F-48B2-44D7-B263-401FDD4ECF7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +93,8 @@ Global
 		{4CBF99C2-84D4-4DF4-AD0D-90062F7688FB} = {1F73DFB3-F72F-4615-9DF0-4E2E8DF140B8}
 		{FC60414A-E273-423A-B66C-853E04421517} = {4CBF99C2-84D4-4DF4-AD0D-90062F7688FB}
 		{CDC431C1-0603-4F72-A935-ED2098470877} = {ECCDF404-92C7-460F-ACFC-8D1BD39645D4}
+		{40727C25-A95F-4F3A-9A4F-18FCEEABEB62} = {7C36A220-90D7-48B8-BBF1-DB4D5879E4F9}
+		{514D6F2F-48B2-44D7-B263-401FDD4ECF7E} = {7C36A220-90D7-48B8-BBF1-DB4D5879E4F9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6C75EFA5-CFF8-4070-96F3-6B6E04FF14DD}

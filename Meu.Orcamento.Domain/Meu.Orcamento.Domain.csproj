@@ -40,8 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Base\EntityBase.cs" />
     <Compile Include="Entities\Categoria.cs" />
+    <Compile Include="Entities\CategoriaPadrao.cs" />
     <Compile Include="Entities\Lancamento.cs" />
     <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Interfaces\Repositories\Categoria\ICategoriaRepository.cs" />

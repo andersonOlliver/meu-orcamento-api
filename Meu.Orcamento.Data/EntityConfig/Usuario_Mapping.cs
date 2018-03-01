@@ -35,6 +35,15 @@ namespace Meu.Orcamento.Data.EntityConfig
             Property(u => u.SALT)
                 .HasMaxLength(50)
                 .IsRequired();
+
+            HasMany<Categoria>(u => u.Categorias)
+                .WithMany(c => c.Usuarios)
+                .Map(uc =>
+                {
+                    uc.MapLeftKey("UsuarioId");
+                    uc.MapRightKey("CategoriaId");
+                    uc.ToTable("UsuarioCategoria");
+                });
         }
     }
 }

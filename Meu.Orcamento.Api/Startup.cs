@@ -86,7 +86,8 @@ namespace Meu.Orcamento.Api
             {
                 AllowInsecureHttp = true,
                 TokenEndpointPath = new PathString("/token"),
-                AccessTokenExpireTimeSpan = TimeSpan.FromHours(2), 
+                AccessTokenExpireTimeSpan = TimeSpan.FromHours(2),
+                AuthorizeEndpointPath = new PathString("/Account/ExternalLogin"),
                 Provider = new AuthorizationProvider(container)
             };
 

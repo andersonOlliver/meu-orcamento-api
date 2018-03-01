@@ -1,3 +1,4 @@
+using Meu.Orcamento.CrossCuting.Enum;
 using Meu.Orcamento.Domain.Entities;
 
 namespace Meu.Orcamento.Data.Migrations
@@ -22,12 +23,12 @@ namespace Meu.Orcamento.Data.Migrations
             //  to avoid creating duplicate seed data.
 
             context.Categorias.AddOrUpdate(
-                new Categoria() { CategoriaId = Guid.NewGuid(), Titulo = "Alimentação", Cor = "#ff9900" },
-                new Categoria() { CategoriaId = Guid.NewGuid(), Titulo = "Lazer", Cor = "#33ffff" },
-                new Categoria() { CategoriaId = Guid.NewGuid(), Titulo = "Moradia", Cor = "#cccccc" },
-                new Categoria() { CategoriaId = Guid.NewGuid(), Titulo = "Outros", Cor = "#000000" },
-                new Categoria() { CategoriaId = Guid.NewGuid(), Titulo = "Salário", Cor = "#cc0000" },
-                new Categoria() { CategoriaId = Guid.NewGuid(), Titulo = "Transporte", Cor = "#ffff00" }
+                new Categoria() { CategoriaId = Guid.NewGuid(), Titulo = "Alimentação", Cor = "#ff9900", TipoCategoria = TipoCategoria.Padrao},
+                new Categoria() { CategoriaId = Guid.NewGuid(), Titulo = "Lazer", Cor = "#33ffff", TipoCategoria = TipoCategoria.Padrao },
+                new Categoria() { CategoriaId = Guid.NewGuid(), Titulo = "Moradia", Cor = "#cccccc", TipoCategoria = TipoCategoria.Padrao },
+                new Categoria() { CategoriaId = Guid.NewGuid(), Titulo = "Outros", Cor = "#000000", TipoCategoria = TipoCategoria.Padrao },
+                new Categoria() { CategoriaId = Guid.NewGuid(), Titulo = "Salário", Cor = "#cc0000", TipoCategoria = TipoCategoria.Padrao },
+                new Categoria() { CategoriaId = Guid.NewGuid(), Titulo = "Transporte", Cor = "#ffff00", TipoCategoria = TipoCategoria.Padrao }
             );
         }
     }

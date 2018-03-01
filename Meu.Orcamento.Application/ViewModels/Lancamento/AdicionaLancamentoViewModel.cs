@@ -5,7 +5,7 @@ using Meu.Orcamento.Application.Validators.Lancamento;
 
 namespace Meu.Orcamento.Application.ViewModels.Lancamento
 {
-    [Validator(AdicionaLancamentoViewModel_Validator)]
+    [Validator(typeof(AdicionaLancamentoViewModel_Validator))]
     public class AdicionaLancamentoViewModel
     {
         public Guid LancamentoId { get; set; }

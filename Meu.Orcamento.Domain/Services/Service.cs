@@ -14,7 +14,7 @@ namespace Meu.Orcamento.Domain.Services
             _repository = repository;
         }
 
-        public P Add(P obj)
+        public virtual P Add(P obj)
         {
             return _repository.Add(obj);
         }

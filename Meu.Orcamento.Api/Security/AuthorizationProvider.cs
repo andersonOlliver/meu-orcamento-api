@@ -5,10 +5,12 @@ using Newtonsoft.Json;
 using SimpleInjector;
 using SimpleInjector.Lifestyles;
 using System;
+using System.Collections.Generic;
 using System.Security.Claims;
 using System.Security.Principal;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Owin.Security;
 
 namespace Meu.Orcamento.Api.Security
 {
@@ -24,6 +26,7 @@ namespace Meu.Orcamento.Api.Security
 
         public override async Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
         {
+
             context.Validated();
         }
 
@@ -31,6 +34,7 @@ namespace Meu.Orcamento.Api.Security
         {
             var identity = new ClaimsIdentity(context.Options.AuthenticationType);
             context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
+
             using (AsyncScopedLifestyle.BeginScope(_container))
             {
 
@@ -51,8 +55,9 @@ namespace Meu.Orcamento.Api.Security
                         return;
                     }
 
-                    //var identity = new ClaimsIdentity(context.Options.AuthenticationType);
+                    
                     identity.AddClaim(new Claim("Usuario", JsonConvert.SerializeObject(usuario)));
+
 
                     var principal = new GenericPrincipal(identity, new string[] { });
 
@@ -66,6 +71,24 @@ namespace Meu.Orcamento.Api.Security
                     return;
                 }
             }
+        }
+
+        public override async Task GrantRefreshToken(OAuthGrantRefreshTokenContext context)
+        {
+            var originalClient = context.Ticket.Properties.Dictionary["as:client_id"];
+            var currentClient = context.OwinContext.Get<string>("as:client_id");
+
+            if (originalClient != currentClient)
+            {
+                context.Rejected();
+                return;
+            }
+
+            var newId = new ClaimsIdentity(context.Ticket.Identity);
+            newId.AddClaim(new Claim("newClaim", "refreshToken"));
+
+            var newTicket = new AuthenticationTicket(newId, context.Ticket.Properties);
+            context.Validated(newTicket);
         }
     }
 }

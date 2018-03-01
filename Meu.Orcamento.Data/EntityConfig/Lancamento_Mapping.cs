@@ -1,4 +1,5 @@
-﻿using Meu.Orcamento.Domain.Entities;
+﻿using System;
+using Meu.Orcamento.Domain.Entities;
 using System.Data.Entity.ModelConfiguration;
 
 namespace Meu.Orcamento.Data.EntityConfig
@@ -19,7 +20,13 @@ namespace Meu.Orcamento.Data.EntityConfig
             Property(l => l.TipoLancamento)
                 .IsRequired();
 
-           
+            HasRequired<Usuario>(l => l.Usuario)
+                .WithMany(u => u.Lancamentos)
+                .HasForeignKey<Guid>(l => l.UsuarioId);
+
+            HasRequired<Categoria>(l => l.Categoria)
+                .WithMany(c => c.Lancamentos)
+                .HasForeignKey<Guid>(l => l.CategoriaId);
         }
     }
 }
